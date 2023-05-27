@@ -3,16 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NewsComponent } from './news/news.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NewsapiService } from './Service/newsapi.service';
+import { MatButtonModule } from '@angular/material/button';
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+
   ],
-  providers: [],
+  providers: [NewsapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
